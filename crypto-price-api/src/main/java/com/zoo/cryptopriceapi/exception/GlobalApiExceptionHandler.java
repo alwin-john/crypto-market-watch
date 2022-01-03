@@ -29,7 +29,7 @@ public class GlobalApiExceptionHandler extends ResponseEntityExceptionHandler {
             , final ServletWebRequest request) {
         logger.error(ex);
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(ex.getCode()
-                , ex.getHttpStatus().getReasonPhrase(), ex.getHttpStatus().value(), CommonUtil.getCurrentTimeStamp());
+                , ex.getMessage(), ex.getHttpStatus().value(), CommonUtil.getCurrentTimeStamp());
         return ResponseEntity.status(ex.getHttpStatus()).body(errorResponseDto);
     }
 }

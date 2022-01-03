@@ -37,7 +37,7 @@ public class CryptoCurrencyServiceImpl implements CryptoCurrencyService {
             throw new BusinessException(BusinessExceptionReason.NOT_FOUND, "No currency is available at the moment");
         }
         List<CurrencyDto> currencies = cryptoCurrencyList.get().stream()
-                .map(c -> new CurrencyDto(c.getIpAddress(), c.getCurrency()
+                .map(c -> new CurrencyDto(c.getId(),c.getIpAddress(), c.getCurrency()
                         , c.getUnitPriceCurrencyCode(), c.getUnitPrice())).collect(Collectors.toList());
 
         String ip = InetAddress.getLocalHost().getHostAddress();
