@@ -12,6 +12,8 @@ import lombok.Setter;
 @Setter
 public class CurrencyDto {
 
+    private long id;
+    
     private String ipAddress;
 
     private String cryptoCurrencyName;
