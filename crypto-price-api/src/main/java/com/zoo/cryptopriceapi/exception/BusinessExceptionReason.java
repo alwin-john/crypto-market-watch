@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public enum BusinessExceptionReason implements BusinessExceptionPolicy{
 
-    NOT_FOUND("rate not found", HttpStatus.NOT_FOUND);
+    NOT_FOUND("No data is available from database", HttpStatus.NOT_FOUND);
 
     private static final String code = BusinessExceptionReason.class.getSimpleName();
 

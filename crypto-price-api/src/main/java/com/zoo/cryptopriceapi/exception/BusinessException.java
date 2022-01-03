@@ -12,18 +12,11 @@ public class BusinessException extends RuntimeException {
 
     private final HttpStatus httpStatus;
 
-    BusinessException(final BusinessExceptionReason businessExceptionReason) {
+    public BusinessException(final BusinessExceptionReason businessExceptionReason) {
         this.code = businessExceptionReason.getCode();
         this.message = businessExceptionReason.getMessage();
         this.httpStatus = businessExceptionReason.getHttpStatus();
     }
-
-    BusinessException(final BusinessExceptionReason businessExceptionReason, String message) {
-        this.code = businessExceptionReason.getCode();
-        this.message = message;
-        this.httpStatus = businessExceptionReason.getHttpStatus();
-    }
-
 
     public BusinessException(final BusinessExceptionReason reason, final Object... parameters) {
         if (parameters != null) {
