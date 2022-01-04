@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: 'http://backend/zoo',
+    baseURL: 'http://localhost:8080/zoo',
     headers: {
         'Content-Type': 'application/json'
     }
