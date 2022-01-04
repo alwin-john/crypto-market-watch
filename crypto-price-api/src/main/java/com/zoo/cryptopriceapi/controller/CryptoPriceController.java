@@ -15,7 +15,7 @@ import java.net.UnknownHostException;
 
 @RestController
 @RequestMapping("/crypto/api/v1")
-@CrossOrigin(origins = "http://frontend")
+@CrossOrigin("*")
 public class CryptoPriceController {
 
     private CryptoCurrencyService cryptoCurrencyService;
