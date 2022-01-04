@@ -24,6 +24,16 @@
       "react-app/jest"
     ]
   },
+  "extends": [
+    "plugin:flowtype/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier",
+    "flowtype"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
