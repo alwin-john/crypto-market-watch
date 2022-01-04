@@ -1,15 +1,33 @@
 # Getting started
 
-### How to build the back end api as a standalone project
+### How to run the project
 
-* ./gradlew bootJar
-* sudo docker build .
-* sudo docker run -d -it -p 8080:8080 crypto-price-api
+* I used docker-compose to containeraize and deploy the application but got stuck in a CORS issue. PLease follow the following steps to run the application
 
+* ./gradlew bootRun -> to run the back end application
+
+* npm start  -> to run the front end application 
+
+(open terminals on respective project root directory)
+
+* access the web app on localhost:3000
+
+
+### supported currency list
+
+* BITCOIN - 127.0.0.1
+
+* ETHER - 127.0.1.1
+
+* BINANCE - 127.0.1.2
+
+* TETHER - 127.0.1.3
 
 ### Assumptions on developing backend service
 
 * All cryptocurrency rates are saved in an in memory database along with the IP address
+
+* For a given currency and IP address there will be only one rate ( currency and ip pair will be unique ) 
 
 ### Proposed backend Architecture
 
