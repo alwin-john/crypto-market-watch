@@ -1,0 +1,17 @@
+version: "3"
+services:
+  backend:
+    build: ./crypto-price-api
+    image: crypto-market-watch_backend
+    container_name: "backend"
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./crypto-market-frontend-service
+    image: crypto-market-watch_frontend
+    container_name: "frontend"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
